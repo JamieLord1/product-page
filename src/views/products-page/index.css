@@ -10,5 +10,11 @@
 }
 
 .product-page-colour-filter {
-	width: 100%;
+	width: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+	.product-page-colour-filter {
+		width: 100%;
+	}
 }
