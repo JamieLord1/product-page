@@ -18,14 +18,10 @@ export class Index extends Component {
 		}
 	}
 
-	componentDidMount() {
-		axios.get('https://my-json-server.typicode.com/benirvingplt/products/products')
-			.then((response) => {
-				this.setState({ products: response.data, allProducts: response.data, coloursAvailable: [...new Set(response.data.map((product) => product.colour))] })
-			})
-			.catch((error) => {
-				throw error
-			});
+	async componentDidMount() {
+		const response = await axios.get('https://my-json-server.typicode.com/benirvingplt/products/products')
+		const { data } = response
+		this.setState({ products: data, allProducts: data, coloursAvailable: [...new Set(data.map((product) => product.colour))] })
 	}
 
 	handleColorFilterOnChange = (colours) => {
