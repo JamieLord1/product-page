@@ -1,0 +1,14 @@
+.product-page-list-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.product-page-total {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.product-page-colour-filter {
+	width: 100%;
+}
