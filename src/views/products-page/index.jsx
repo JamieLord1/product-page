@@ -23,7 +23,6 @@ export class Index extends Component {
 		const response = await axios.get('https://my-json-server.typicode.com/benirvingplt/products/products')
 		let data = []
 		if (response !== null && response !== undefined) {
-			console.log(response)
 			if (response.hasOwnProperty('data')) {
 				data = response.data
 			}
@@ -56,10 +55,10 @@ export class Index extends Component {
 		const { Option } = Select
 		return (
 			<div>
-				<Select data-testid="color-filter" mode="multiple" placeholder="Colour filter" onChange={this.handleColorFilterOnChange} className="product-page-colour-filter">
+				<Select mode="multiple" placeholder="Colour filter" onChange={this.handleColorFilterOnChange} className="product-page-colour-filter">
 					{
 						coloursAvailable.map((color) => (
-							<Option data-testid={`${color}-option`} key={color} value={color}>{color}</Option>
+							<Option key={color} value={color}>{color}</Option>
 						))
 					}
 				</Select>
