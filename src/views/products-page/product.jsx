@@ -11,7 +11,7 @@ function Product({ id, img, name, price, total, quant }) {
 	React.useEffect(() => {
 		if (prevQuantity !== quantity) {
 			if (prevQuantity === undefined) {
-				total(quantity * price, id, quantity)
+				total(0 * price, id, quantity)
 			} else {
 				total((quantity - prevQuantity) * price, id, quantity)
 			}
