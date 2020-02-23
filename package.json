@@ -16,7 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+	"test": "react-scripts test",
+	"test:update": "react-scripts test --verbose --coverage --updateSnapshot && open ./coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,6 +41,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "react-test-renderer": "^16.12.0"
   }
 }

@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="product-page-colour-filter ant-select ant-select-enabled"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseUp={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      aria-autocomplete="list"
+      aria-controls="test-uuid"
+      aria-expanded={false}
+      aria-haspopup="true"
+      className="ant-select-selection
+            ant-select-selection--multiple"
+      data-testid="color-filter"
+      role="combobox"
+    >
+      <div
+        className="ant-select-selection__rendered"
+      >
+        <div
+          className="ant-select-selection__placeholder"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "display": "block",
+              "userSelect": "none",
+            }
+          }
+          unselectable="on"
+        >
+          Colour filter
+        </div>
+        <ul>
+          <li
+            className="ant-select-search ant-select-search--inline"
+          >
+            <div
+              className="ant-select-search__field__wrap"
+            >
+              <input
+                autoComplete="off"
+                className="ant-select-search__field"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              />
+              <span
+                className="ant-select-search__field__mirror"
+              >
+                
+                 
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    className="product-page-list-container"
+  >
+    <h2>
+      Loading...
+    </h2>
+  </div>
+  <hr />
+  <h2
+    className="product-page-total"
+  >
+    £ Total 0.00
+  </h2>
+</div>
+`;

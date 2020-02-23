@@ -14,14 +14,21 @@ export class Index extends Component {
 			coloursAvailable: [],
 			allProducts: [],
 			total: 0,
-			quantities: {}
+			quantities: {},
+			loading: true
 		}
 	}
 
 	async componentDidMount() {
 		const response = await axios.get('https://my-json-server.typicode.com/benirvingplt/products/products')
-		const { data } = response
-		this.setState({ products: data, allProducts: data, coloursAvailable: [...new Set(data.map((product) => product.colour))] })
+		let data = []
+		if (response !== null && response !== undefined) {
+			console.log(response)
+			if (response.hasOwnProperty('data')) {
+				data = response.data
+			}
+		}
+		this.setState({ products: data, allProducts: data, coloursAvailable: [...new Set(data.map((product) => product.colour))], loading: false })
 	}
 
 	handleColorFilterOnChange = (colours) => {
@@ -45,32 +52,34 @@ export class Index extends Component {
 	}
 
 	render() {
-		const { products, coloursAvailable, total, quantities } = this.state
+		const { products, coloursAvailable, total, quantities, loading } = this.state
 		const { Option } = Select
 		return (
 			<div>
-				<Select mode="multiple" placeholder="Colour filter" onChange={this.handleColorFilterOnChange} className="product-page-colour-filter">
+				<Select data-testid="color-filter" mode="multiple" placeholder="Colour filter" onChange={this.handleColorFilterOnChange} className="product-page-colour-filter">
 					{
 						coloursAvailable.map((color) => (
-							<Option key={color} value={color}>{color}</Option>
+							<Option data-testid={`${color}-option`} key={color} value={color}>{color}</Option>
 						))
 					}
 				</Select>
 				<div className="product-page-list-container">
 					{
-						products.map((product) => (
-							<Product
-								key={product.id}
-								id={product.id}
-								img={product.img}
-								name={product.name}
-								price={product.price}
-								quant={quantities[product.id]}
-								total={(val, id, quantity) => {
-									this.setState({ total: (total + val), quantities: { ...quantities, [id]: quantity } })
-								}}
-							/>
-						))
+						loading
+							? <h2>Loading...</h2>
+							: products.map((product) => (
+								<Product
+									key={product.id}
+									id={product.id}
+									img={product.img}
+									name={product.name}
+									price={product.price}
+									quant={quantities[product.id]}
+									total={(val, id, quantity) => {
+										this.setState({ total: (total + val), quantities: { ...quantities, [id]: quantity } })
+									}}
+								/>
+							))
 					}
 				</div>
 				<hr />

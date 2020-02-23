@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Icon, Button } from 'antd';
+import { Button } from 'antd';
 import PropTypes from 'prop-types'
 import { usePrevious } from '../../helpers/utils';
 import './product.css'
@@ -29,14 +29,18 @@ function Product({ id, img, name, price, total, quant }) {
 			</div>
 			<div className="product-qty-container">
 				<Button onClick={() => setQuantity(quantity > 0 ? quantity - 1 : 0)}>
-					<Icon type="minus" />
+					<span style={{ fontSize: 18 }}>
+						-
+					</span>
 				</Button>
 				<div className="product-qty-text-container">
 					<h2 className="product-qty-text">{`Qty ${quantity === 0 ? '' : quantity}`}</h2>
 					<button type="button" onClick={() => setQuantity(0)} className="product-qty-remove-button">Remove</button>
 				</div>
 				<Button onClick={() => setQuantity(quantity + 1)}>
-					<Icon type="plus" />
+					<span style={{ fontSize: 18 }}>
+						+
+					</span>
 				</Button>
 			</div>
 		</div>

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="product-container"
+>
+  <img
+    alt=""
+    className="product-img"
+    src=""
+    width="100%"
+  />
+  <div
+    className="product-text-container"
+  >
+    <h1
+      className="product-name"
+    >
+      
+    </h1>
+    <label
+      className="product-price"
+    >
+      £7.99
+    </label>
+  </div>
+  <div
+    className="product-qty-container"
+  >
+    <button
+      className="ant-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        style={
+          Object {
+            "fontSize": 18,
+          }
+        }
+      >
+        -
+      </span>
+    </button>
+    <div
+      className="product-qty-text-container"
+    >
+      <h2
+        className="product-qty-text"
+      >
+        Qty 
+      </h2>
+      <button
+        className="product-qty-remove-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Remove
+      </button>
+    </div>
+    <button
+      className="ant-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        style={
+          Object {
+            "fontSize": 18,
+          }
+        }
+      >
+        +
+      </span>
+    </button>
+  </div>
+</div>
+`;
