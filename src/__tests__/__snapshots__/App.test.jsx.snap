@@ -23,7 +23,6 @@ exports[`renders correctly 1`] = `
           aria-haspopup="true"
           className="ant-select-selection
             ant-select-selection--multiple"
-          data-testid="color-filter"
           role="combobox"
         >
           <div
