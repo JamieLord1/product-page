@@ -1,17 +1,22 @@
 .product-container {
 	display: flex;
 	flex-direction: row;
+	width: 100%;
+	justify-content: space-evenly;
 }
 
 .product-img {
 	padding: 5px;
-	width: 25%;
+	flex: 1;
+	width: 15%;
+	justify-self: flex-start;
 }
 
 .product-text-container {
 	display: flex;
 	flex-direction: column;
-	width: 25%;
+	flex: 2;
+	justify-self: flex-start;
 }
 
 .product-name {
@@ -29,8 +34,8 @@
 .product-qty-container {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	width: 40%;
+	justify-content: center;
+	flex: 4;
 }
 
 .product-qty-text-container {

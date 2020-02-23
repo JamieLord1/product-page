@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import { Select } from 'antd';
+import { Select, Spin } from 'antd';
 import Product from './product'
 import './index.css'
 
@@ -54,7 +54,7 @@ export class Index extends Component {
 		const { products, coloursAvailable, total, quantities, loading } = this.state
 		const { Option } = Select
 		return (
-			<div>
+			<div className="product-page-container">
 				<Select mode="multiple" placeholder="Colour filter" onChange={this.handleColorFilterOnChange} className="product-page-colour-filter">
 					{
 						coloursAvailable.map((color) => (
@@ -65,7 +65,7 @@ export class Index extends Component {
 				<div className="product-page-list-container">
 					{
 						loading
-							? <h2>Loading...</h2>
+							? <Spin />
 							: products.map((product) => (
 								<Product
 									key={product.id}
@@ -81,10 +81,12 @@ export class Index extends Component {
 							))
 					}
 				</div>
-				<hr />
-				<h2 className="product-page-total">
-					{`£ Total ${total.toFixed(2)}`}
-				</h2>
+				<div className="product-page-total-container">
+					<hr />
+					<h2 className="product-page-total">
+						{`£ Total ${total.toFixed(2)}`}
+					</h2>
+				</div>
 			</div>
 		)
 	}

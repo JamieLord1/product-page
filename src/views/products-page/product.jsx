@@ -29,7 +29,7 @@ function Product({ id, img, name, price, total, quant }) {
 			</div>
 			<div className="product-qty-container">
 				<Button onClick={() => setQuantity(quantity > 0 ? quantity - 1 : 0)}>
-					<span style={{ fontSize: 18 }}>
+					<span className="product-qty-change-button">
 						-
 					</span>
 				</Button>
@@ -38,7 +38,7 @@ function Product({ id, img, name, price, total, quant }) {
 					<button type="button" onClick={() => setQuantity(0)} className="product-qty-remove-button">Remove</button>
 				</div>
 				<Button onClick={() => setQuantity(quantity + 1)}>
-					<span style={{ fontSize: 18 }}>
+					<span className="product-qty-change-button">
 						+
 					</span>
 				</Button>

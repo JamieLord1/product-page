@@ -1,7 +1,18 @@
+.product-page-container {
+	margin-bottom: 62px;
+}
+
 .product-page-list-container {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+}
+
+.product-page-total-container{
+	position: fixed;
+    bottom: 0px;
+    width: 90%;
+    background: #fff;
 }
 
 .product-page-total {
