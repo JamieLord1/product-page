@@ -8,6 +8,8 @@
 	width: 100%;
 }
 
+
+
 .product-page-total-container{
 	position: fixed;
     bottom: 0px;
@@ -22,6 +24,7 @@
 
 .product-page-colour-filter {
 	width: 250px;
+	margin-left: 5px;
 }
 
 @media only screen and (max-width: 768px) {

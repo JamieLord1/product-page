@@ -84,7 +84,7 @@ export class Index extends Component {
 				<div className="product-page-total-container">
 					<hr />
 					<h2 className="product-page-total">
-						{`£ Total ${total.toFixed(2)}`}
+						{`Total £${total.toFixed(2)}`}
 					</h2>
 				</div>
 			</div>
