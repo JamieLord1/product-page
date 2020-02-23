@@ -58,6 +58,10 @@
 	outline: none;
 }
 
+.product-qty-change-button {
+	font-size: 18px;
+}
+
 @media only screen and (max-width: 768px) {
 	.product-container {
 		display: flex;
