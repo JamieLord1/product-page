@@ -33,11 +33,7 @@ exports[`renders correctly 1`] = `
       type="button"
     >
       <span
-        style={
-          Object {
-            "fontSize": 18,
-          }
-        }
+        className="product-qty-change-button"
       >
         -
       </span>
@@ -64,11 +60,7 @@ exports[`renders correctly 1`] = `
       type="button"
     >
       <span
-        style={
-          Object {
-            "fontSize": 18,
-          }
-        }
+        className="product-qty-change-button"
       >
         +
       </span>

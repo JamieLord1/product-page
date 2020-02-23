@@ -6,11 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <div>
     <div
-      style={
-        Object {
-          "marginBottom": 62,
-        }
-      }
+      className="product-page-container"
     >
       <div
         className="product-page-colour-filter ant-select ant-select-enabled"
@@ -106,7 +102,7 @@ exports[`renders correctly 1`] = `
         <h2
           className="product-page-total"
         >
-          £ Total 0.00
+          Total £0.00
         </h2>
       </div>
     </div>
