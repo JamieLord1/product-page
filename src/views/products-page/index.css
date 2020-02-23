@@ -30,5 +30,6 @@
 @media only screen and (max-width: 768px) {
 	.product-page-colour-filter {
 		width: 100%;
+		margin-left: 0px;
 	}
 }
